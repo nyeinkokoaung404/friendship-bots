@@ -1,14 +1,297 @@
-<!doctype html>
-<html lang="en" data-critters-container>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>SangBots Status</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
-<link rel="stylesheet" href="css/styles-5INURTSO.css"></head>
-<body>
-  <app-root></app-root>
-<script src="js/polyfills-A7MJM4D4.js" type="module"></script><script src="js/main-BSVSUD2U.js" type="module"></script></body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V2Ray Checker Bot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .language-switcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-shield-alt text-2xl mr-2"></i>
+                    <span class="font-semibold text-xl">V2Ray Checker</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="hover:text-gray-200">Features</a>
+                    <a href="#how-it-works" class="hover:text-gray-200">How It Works</a>
+                    <a href="#apps" class="hover:text-gray-200">Supported Apps</a>
+                    <a href="https://t.me/your_bot_username" class="bg-white text-purple-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition">Start Bot</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">V2Ray Account Checker</h1>
+            <p class="text-xl md:text-2xl mb-8">Check your V2Ray account status directly from Telegram</p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="https://t.me/your_bot_username" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">Start Using Bot</a>
+                <a href="#how-it-works" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition">How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-bolt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Real-time Status</h3>
+                    <p class="text-gray-600">Check your account status, traffic usage, and expiry time instantly.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-qrcode text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">QR Code Support</h3>
+                    <p class="text-gray-600">Simply scan your V2Ray QR code to check your account details.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md card-hover transition">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-globe text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Multi-language</h3>
+                    <p class="text-gray-600">Supports English and Burmese languages for better user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0">1</div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Start the Bot</h3>
+                                <p class="text-gray-600">Open Telegram and start a conversation with @V2RayCheckerBot</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0">2</div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Send Your Account Info</h3>
+                                <p class="text-gray-600">Send your V2Ray link, QR code, or UUID to the bot</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0">3</div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Get Detailed Stats</h3>
+                                <p class="text-gray-600">Receive comprehensive information about your account status</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://t.me/your_bot_username" class="inline-block gradient-bg text-white px-6 py-3 rounded-lg font-bold hover:opacity-90 transition">Try It Now</a>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://via.placeholder.com/500x300" alt="Bot interface example" class="rounded-xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Apps Section -->
+    <section id="apps" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Supported Applications</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- App 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center card-hover transition">
+                    <img src="https://via.placeholder.com/100" alt="Nekoray" class="h-16 mx-auto mb-4">
+                    <h3 class="font-bold mb-2">Nekoray</h3>
+                    <p class="text-sm text-gray-600">Windows/Android</p>
+                </div>
+                
+                <!-- App 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center card-hover transition">
+                    <img src="https://via.placeholder.com/100" alt="V2rayNG" class="h-16 mx-auto mb-4">
+                    <h3 class="font-bold mb-2">V2rayNG</h3>
+                    <p class="text-sm text-gray-600">Android</p>
+                </div>
+                
+                <!-- App 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center card-hover transition">
+                    <img src="https://via.placeholder.com/100" alt="Shadowrocket" class="h-16 mx-auto mb-4">
+                    <h3 class="font-bold mb-2">Shadowrocket</h3>
+                    <p class="text-sm text-gray-600">iOS</p>
+                </div>
+                
+                <!-- App 4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md text-center card-hover transition">
+                    <img src="https://via.placeholder.com/100" alt="Clash" class="h-16 mx-auto mb-4">
+                    <h3 class="font-bold mb-2">Clash</h3>
+                    <p class="text-sm text-gray-600">Windows/macOS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Trial Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Get 50GB Free Trial</h2>
+            <p class="text-xl mb-8">Try our service for free with 50GB data valid for 7 days</p>
+            <a href="https://t.me/your_bot_username" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">Get Free Trial</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ 1 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">How do I check my V2Ray account?</h3>
+                    <p class="text-gray-600">Simply send your V2Ray configuration link, QR code, or UUID to our Telegram bot. The bot will analyze your account and provide detailed statistics.</p>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <h3 class="text-xl font-bold mb-3">Is the free trial really free?</h3>
+                    <p class="text-gray-600">Yes! You get 50GB of data completely free for 7 days with no credit card required. After the trial period ends, you can choose to purchase a subscription.</p>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold mb-3">Which platforms are supported?</h3>
+                    <p class="text-gray-600">Our service works with all major platforms including Windows, macOS, Android, and iOS. We support popular V2Ray clients like Nekoray, V2rayNG, Shadowrocket, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">V2Ray Checker</h3>
+                    <p class="text-gray-400">The easiest way to check your V2Ray account status and usage.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition">How It Works</a></li>
+                        <li><a href="#apps" class="text-gray-400 hover:text-white transition">Supported Apps</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="https://t.me/your_support" class="text-gray-400 hover:text-white transition">Telegram Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-telegram text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-github text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 V2Ray Checker Bot. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <div class="bg-white rounded-full shadow-lg p-2">
+            <div class="flex space-x-2">
+                <button class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 font-bold">EN</button>
+                <button class="w-8 h-8 rounded-full bg-gray-100 text-gray-600 font-bold">MY</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-50">
+        <div class="flex flex-col items-center justify-center h-full">
+            <a href="#features" class="text-white text-2xl mb-6">Features</a>
+            <a href="#how-it-works" class="text-white text-2xl mb-6">How It Works</a>
+            <a href="#apps" class="text-white text-2xl mb-6">Supported Apps</a>
+            <a href="https://t.me/your_bot_username" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-bold text-lg mt-4">Start Bot</a>
+            <button class="mobile-menu-close absolute top-6 right-6 text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+        
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
 </html>
